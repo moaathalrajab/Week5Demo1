@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout mLinearLayout;
     Button mBtn;
     ListView mLv;
-    ArrayAdapter<String> adapter;
+    MyAdapter adapter;
     String str="";
 
     @Override
@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
             mBtn = new Button(this);
             mLv=new ListView(this);
-        adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,
-                android.R.id.text1,lstClasses );
+        adapter=new MyAdapter(this,-1, mClasses );
 
             mLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -84,22 +83,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i(LOG_TAG, "THis activity is in onPause");
 
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i(LOG_TAG, "THis activity is in onResume");
 
-    }
 
     public void ckange_name(View view) {
-        mTv.setText("Moaath Lambda");
+        mTv.setText(getString(R.string.text_id));
     }
 
 

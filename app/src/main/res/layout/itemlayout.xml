@@ -6,16 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="horizontal"
-    android:id="@+id/main_layout_id">
-
-
-    <ImageView
-        android:src="@mipmap/ic_launcher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    android:id="@+id/main_layout_id"
+    android:background="@drawable/bg">
 
     <TextView
         android:id="@+id/text2"
-        android:layout_width="wrap_content"
+        android:layout_weight="3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/image_view1"
+        android:src="@drawable/ic_baseline_favorite_border_24px"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc_icon"
+        />
+    
 </LinearLayout>

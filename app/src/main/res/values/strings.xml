@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Week4Demo1</string>
-
+<string name="desc_icon">icon ...</string>
+    <string name="text_id">Moaath Lambda</string>
     <string-array name="fsc_bcs_classes">
         <item>BCS120</item>
         <item>BCS220</item>
